@@ -12,3 +12,5 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 COPY requirements.txt /requirements.txt
 
 RUN pip3 install -r /requirements.txt
+
+COPY patch/context.py /usr/local/lib/python3.7/site-packages/stacker/context.py
